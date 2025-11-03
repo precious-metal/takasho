@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社高商 - TAKASHO Co., Ltd. | 古物・貴金属・貿易事業</title>
+    <!-- Tailwind CSSを読み込み、レスポンシブデザインとモダンなスタイルを実現 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Interフォントを読み込み（標準的な美しさ） -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* 日本語フォントとInterフォントを組み合わせ、可読性を高める */
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            color: #333;
+            background-color: #f7f7f7;
+            scroll-behavior: smooth;
+        }
+        /* セクションヘッダーのカスタムスタイル */
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #D97706; /* Amber-600 */
+            border-radius: 9999px;
+        }
+        /* ホバー時のカードの浮き上がり効果 */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* メインビジュアルの背景設定 */
+        #hero {
+            background-color: #1a202c; /* Dark Blue/Charcoal */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ヘッダー / ナビゲーションバー -->
+<header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- ロゴ / 会社名 -->
+            <a href="#hero" class="flex-shrink-0 text-xl font-extrabold text-[#D97706] tracking-wider">
+                株式会社 高商
+            </a>
+
+            <!-- ナビゲーションリンク (デスクトップ) -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-[#D97706] transition duration-150 ease-in-out font-medium">会社概要</a>
+                <a href="#business" class="text-gray-600 hover:text-[#D97706] transition duration-150 ease-in-out font-medium">事業内容</a>
+                <a href="#contact" class="text-gray-600 hover:text-[#D97706] transition duration-150 ease-in-out font-medium">お問い合わせ</a>
+            </nav>
+
+            <!-- モバイルメニューボタン (トグル用) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-500 hover:text-gray-700 p-2 rounded-md focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- モバイルメニュー (非表示状態) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#D97706]">会社概要</a>
+            <a href="#business" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#D97706]">事業内容</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#D97706]">お問い合わせ</a>
+        </div>
+    </div>
+</header>
+
+<!-- メインビジュアル / ヒーローセクション -->
+<section id="hero" class="relative overflow-hidden pt-32 pb-24 md:pt-48 md:pb-36">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+            「価値」をつなぎ、<br class="sm:hidden">未来を築く。
+        </h1>
+        <p class="text-xl sm:text-2xl text-gray-300 font-light mb-8 max-w-2xl mx-auto">
+            古物、貴金属、貿易を通じて、世界の資源循環と経済活動を支えます。
+        </p>
+        <a href="#contact" class="inline-block px-8 py-3 text-lg font-bold text-gray-900 bg-[#FCD34D] rounded-full shadow-lg hover:bg-[#FBBF24] transition duration-300 transform hover:scale-105">
+            お問い合わせはこちら
+        </a>
+    </div>
+    <!-- 背景の抽象的な図形 (視覚的なアクセント) -->
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 810" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="gradient-hero" x1="50%" y1="0%" x2="50%" y2="100%">
+                <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.3" />
+                <stop offset="100%" style="stop-color:#1E3A8A;stop-opacity:0.7" />
+            </linearGradient>
+        </defs>
+        <rect width="1440" height="810" fill="url(#gradient-hero)"/>
+        <circle cx="200" cy="400" r="150" fill="rgba(255, 255, 255, 0.05)" />
+        <circle cx="1200" cy="300" r="200" fill="rgba(255, 255, 255, 0.03)" />
+    </svg>
+</section>
+
+<!-- 会社概要セクション -->
+<section id="about" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="section-title text-gray-800">会社概要 (ABOUT US)</h2>
+        <div class="mt-10 text-left">
+            <div class="bg-gray-50 p-6 sm:p-10 rounded-xl shadow-lg border border-gray-100">
+                <dl class="space-y-6">
+                    <div class="md:grid md:grid-cols-3 md:gap-4 border-b pb-4">
+                        <dt class="font-bold text-gray-600">商号</dt>
+                        <dd class="mt-1 md:mt-0 md:col-span-2 text-gray-800">株式会社 高商 (TAKASHO Co., Ltd.)</dd>
+                    </div>
+                    <div class="md:grid md:grid-cols-3 md:gap-4 border-b pb-4">
+                        <dt class="font-bold text-gray-600">設立年月日</dt>
+                        <dd class="mt-1 md:mt-0 md:col-span-2 text-gray-800">平成28年10月6日 (2016年)</dd>
+                    </div>
+                    <div class="md:grid md:grid-cols-3 md:gap-4 border-b pb-4">
+                        <dt class="font-bold text-gray-600">資本金の額</dt>
+                        <dd class="mt-1 md:mt-0 md:col-span-2 text-gray-800">1000万円</dd>
+                    </div>
+                    <div class="md:grid md:grid-cols-3 md:gap-4 border-b pb-4">
+                        <dt class="font-bold text-gray-600">所在地</dt>
+                        <dd class="mt-1 md:mt-0 md:col-span-2 text-gray-800">
+                            〒110-0003<br>
+                            東京都台東区根岸二丁目18番8号 鶯谷ハイム103号
+                        </dd>
+                    </div>
+                    <div class="md:grid md:grid-cols-3 md:gap-4 pb-0">
+                        <dt class="font-bold text-gray-600">役員</dt>
+                        <dd class="mt-1 md:mt-0 md:col-span-2 text-gray-800">代表取締役　高橋 相旼</dd>
+                    </div>
+                </dl>
+            </div>
+            <blockquote class="mt-12 p-6 bg-yellow-50 border-l-4 border-[#D97706] rounded-r-lg text-gray-700 italic shadow-sm">
+                <p class="mb-2 text-lg font-medium">経営理念</p>
+                <p>「誠実」と「信頼」を基盤に、時代や国境を越えて人々の生活を豊かにする価値を提供し続けます。環境に配慮した資源の再活用と、グローバルな市場開拓を通じて社会に貢献します。</p>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<!-- 事業内容セクション -->
+<section id="business" class="py-16 md:py-24 bg-[#f7f7f7]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="section-title text-gray-800">事業内容 (BUSINESS)</h2>
+        <p class="text-lg text-gray-600 mb-12">私たちは3つの柱となる事業を展開し、お客様のニーズと社会の持続可能性に応えます。</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- 事業カード 1: 古物営業 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover transition duration-300">
+                <div class="text-[#D97706] mb-4">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">古物売買及び競りあっせん業</h3>
+                <p class="text-gray-600 text-sm">
+                    古物営業法に基づき、幅広いジャンルの古物を適正に売買します。特に競りあっせんを通じて、市場の活性化と資源の循環に貢献しています。長年の経験と確かな査定眼で、お客様の「価値あるもの」を次へとつなぎます。
+                </p>
+            </div>
+
+            <!-- 事業カード 2: 貴金属・アクセサリー -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover transition duration-300">
+                <div class="text-[#D97706] mb-4">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.592c.306-.922 1.603-.922 1.909 0l1.519 4.588a1 1 0 00.95.691h4.847c.915 0 1.258 1.167.59 1.83l-3.918 3.744a1 1 0 00-.316.923l1.519 4.588c.306.922-.756 1.685-1.57 1.112l-4.786-3.417a1 1 0 00-1.175 0l-4.786 3.417c-.813.573-1.879-.19-1.57-1.112l1.519-4.588a1 1 0 00-.316-.923L2.553 9.7a1 1 0 01.59-1.83h4.847a1 1 0 00.95-.691l1.519-4.588z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">貴金属・アクセサリーの製造・販売</h3>
+                <p class="text-gray-600 text-sm">
+                    貴金属やアクセサリーの仕入れ、加工、製造、販売を一貫して手掛けます。国内外の市場動向を的確に捉え、高品質で魅力的な商品を供給。お客様の多様なニーズに応える製品開発を行っています。
+                </p>
+            </div>
+
+            <!-- 事業カード 3: 物品の貿易・仲立 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover transition duration-300">
+                <div class="text-[#D97706] mb-4">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">物品の貿易・輸出入及び仲立業</h3>
+                <p class="text-gray-600 text-sm">
+                    国内外の物品の貿易、輸出入、仲立、代理業を展開。特にアジア圏を中心としたネットワークを活かし、安全で効率的な国際取引をサポートします。日本の高品質な商品を世界へ、世界の優れた商品を日本へ届けます。
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- お問い合わせセクション -->
+<section id="contact" class="py-16 md:py-24 bg-gray-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="section-title text-white after:bg-[#FCD34D]">お問い合わせ (CONTACT)</h2>
+        <p class="text-lg text-gray-300 mb-12">
+            各種事業に関するご相談、ご質問、採用に関するお問い合わせは、下記よりお気軽にご連絡ください。
+        </p>
+
+        <div class="bg-white p-8 md:p-10 rounded-xl shadow-2xl text-left">
+            <form id="contact-form">
+                <div class="mb-6">
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">お名前 <span class="text-red-500">*</span></label>
+                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#D97706] focus:border-[#D97706] transition duration-150" placeholder="株式会社 高商 太郎">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">メールアドレス <span class="text-red-500">*</span></label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#D97706] focus:border-[#D97706] transition duration-150" placeholder="info@example.com">
+                </div>
+                <div class="mb-6">
+                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">件名</label>
+                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#D97706] focus:border-[#D97706] transition duration-150" placeholder="事業提携について">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">お問い合わせ内容 <span class="text-red-500">*</span></label>
+                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#D97706] focus:border-[#D97706] transition duration-150" placeholder="詳細をご記入ください..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#D97706] text-white font-bold py-3 rounded-lg hover:bg-[#FBBF24] transition duration-300 transform hover:scale-[1.01] shadow-md">
+                    送信する
+                </button>
+                <!-- メッセージ表示エリア -->
+                <div id="status-message" class="mt-4 text-center text-sm font-medium hidden p-3 rounded-lg"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- フッター -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:items-center">
+
+        <div class="mb-4 md:mb-0">
+            <p class="text-lg font-bold text-[#FCD34D]">株式会社 高商 (TAKASHO Co., Ltd.)</p>
+            <p class="text-sm text-gray-400 mt-1">東京都台東区根岸二丁目18番8号 鶯谷ハイム103号</p>
+        </div>
+
+        <nav class="flex justify-center space-x-6">
+            <a href="#about" class="text-gray-400 hover:text-white text-sm transition duration-150">会社概要</a>
+            <a href="#business" class="text-gray-400 hover:text-white text-sm transition duration-150">事業内容</a>
+            <a href="#contact" class="text-gray-400 hover:text-white text-sm transition duration-150">お問い合わせ</a>
+        </nav>
+    </div>
+    <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-500">
+        &copy; 2025 TAKASHO Co., Ltd. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    // --- JavaScript for Mobile Menu Toggling ---
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // モバイルメニューのリンクをクリックした後にメニューを閉じる
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    });
+
+
+    // --- JavaScript for Contact Form Submission Simulation ---
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // フォームのデフォルト送信を防止
+
+        const statusMessage = document.getElementById('status-message');
+        const form = event.target;
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        // フォーム送信中の状態を設定
+        statusMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
+        statusMessage.classList.add('bg-blue-100', 'text-blue-700', 'block');
+        statusMessage.textContent = '送信中です... しばらくお待ちください。';
+        submitButton.disabled = true;
+
+        // 実際のAPIコールがないため、非同期処理をシミュレート
+        setTimeout(() => {
+            // シミュレーション完了後の処理
+            statusMessage.classList.remove('bg-blue-100', 'text-blue-700');
+
+            // 成功として扱う
+            statusMessage.classList.add('bg-green-100', 'text-green-700');
+            statusMessage.textContent = 'お問い合わせを受け付けました。ありがとうございます。';
+            form.reset(); // フォームをリセット
+
+            submitButton.disabled = false;
+
+            // 5秒後にメッセージを非表示にする
+            setTimeout(() => {
+                statusMessage.classList.add('hidden');
+            }, 5000);
+        }, 1500); // 1.5秒の遅延
+    });
+
+</script>
+</body>
+</html>
