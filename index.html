@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>株式会社高商 - TAKASHO Co., Ltd. | 古物・貴金属・貿易事業</title>
-    <!-- Tailwind CSSを読み込み、レスポンシブデザインとモダンなスタイルを実現 -->
+    <!-- Tailwind CSSを読み込み -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Interフォントを読み込み（標準的な美しさ） -->
+    <!-- Interフォントを読み込み -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
         /* 日本語フォントとInterフォントを組み合わせ、可読性を高める */
@@ -51,40 +51,40 @@
 </head>
 <body>
 
-<!-- ヘッダー / ナビゲーションバー -->
+<!-- ヘッダー -->
 <header class="sticky top-0 z-50 bg-white shadow-md">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-            <!-- ロゴ / 会社名 -->
+            <!-- ロゴ -->
             <a href="#hero" class="flex-shrink-0 text-xl font-extrabold text-[#D97706] tracking-wider">
                 株式会社 高商
             </a>
 
-            <!-- ナビゲーションリンク (デスクトップ) -->
+            <!-- ナビゲーションリンク -->
             <nav class="hidden md:flex space-x-8">
                 <a href="#about" class="text-gray-600 hover:text-[#D97706] transition duration-150 ease-in-out font-medium">会社概要</a>
                 <a href="#business" class="text-gray-600 hover:text-[#D97706] transition duration-150 ease-in-out font-medium">事業内容</a>
-                <a href="#contact" class="text-gray-600 hover:text-[#D97706] transition duration-150 ease-in-out font-medium">連絡先・所在地</a>
+                <a href="#contact" class="text-gray-600 hover:text-[#D97706] transition duration-150 ease-in-out font-medium">問い合わせ</a>
             </nav>
 
-            <!-- モバイルメニューボタン (トグル用) -->
+            <!-- モバイルメニューボタン -->
             <button id="mobile-menu-button" class="md:hidden text-gray-500 hover:text-gray-700 p-2 rounded-md focus:outline-none">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
     </div>
 
-    <!-- モバイルメニュー (非表示状態) -->
+    <!-- モバイルメニュー -->
     <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#D97706]">会社概要</a>
             <a href="#business" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#D97706]">事業内容</a>
-            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#D97706]">連絡先・所在地</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#D97706]">問い合わせ</a>
         </div>
     </div>
 </header>
 
-<!-- メインビジュアル / ヒーローセクション -->
+<!-- メインビジュアル -->
 <section id="hero" class="relative overflow-hidden pt-32 pb-24 md:pt-48 md:pb-36">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
@@ -93,11 +93,8 @@
         <p class="text-xl sm:text-2xl text-gray-300 font-light mb-8 max-w-2xl mx-auto">
             古物、貴金属、貿易を通じて、世界の資源循環と経済活動を支えます。
         </p>
-        <a href="#contact" class="inline-block px-8 py-3 text-lg font-bold text-gray-900 bg-[#FCD34D] rounded-full shadow-lg hover:bg-[#FBBF24] transition duration-300 transform hover:scale-105">
-            お問い合わせはこちら
-        </a>
     </div>
-    <!-- 背景の抽象的な図形 (視覚的なアクセント) -->
+    <!-- 背景の抽象的な図形 -->
     <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 810" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <linearGradient id="gradient-hero" x1="50%" y1="0%" x2="50%" y2="100%">
@@ -137,9 +134,12 @@
                             東京都台東区根岸二丁目18番8号 鶯谷ハイム103号
                         </dd>
                     </div>
+                    <!-- 役員情報 -->
                     <div class="md:grid md:grid-cols-3 md:gap-4 pb-0">
-                        <dt class="font-bold text-gray-600">代表取締役</dt>
-                        <dd class="mt-1 md:mt-0 md:col-span-2 text-gray-800">高橋 相旼 (タカハシ サンミ)</dd>
+                        <dt class="font-bold text-gray-600">役員</dt>
+                        <dd class="mt-1 md:mt-0 md:col-span-2 text-gray-800 whitespace-nowrap">
+                            代表取締役　<span class="inline-block">高橋 相旼 (コウ ハクビン)</span>
+                        </dd>
                     </div>
                 </dl>
             </div>
@@ -154,11 +154,12 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <!-- 事業カード 1: 古物営業 (内容を更新) -->
+            <!-- 事業カード 1: 古物営業 -->
             <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover transition duration-300 md:col-span-1">
                 <div class="text-[#D97706] mb-4">
                     <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                 </div>
+                <!-- タイトルサイズをtext-xlで統一 -->
                 <h3 class="text-xl font-bold text-gray-900 mb-3">古物売買及び競りあっせん業</h3>
                 <p class="text-gray-600 text-sm mb-4">
                     当店は、国内の正規仕入れ業者やお客様からお譲りいただいた古物を<b>丁寧に査定・買取</b>し、次に必要とされる方へつなぐことで、<b>価値ある品物を循環</b>させることを目的としております。
@@ -168,7 +169,7 @@
                 </p>
             </div>
 
-            <!-- 事業カード 2: 貴金属・アクセサリー -->
+            <!-- 事業カード 2: 貴金属・アクセサリー (text-xlに修正) -->
             <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover transition duration-300 md:col-span-1">
                 <div class="text-[#D97706] mb-4">
                     <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.592c.306-.922 1.603-.922 1.909 0l1.519 4.588a1 1 0 00.95.691h4.847c.915 0 1.258 1.167.59 1.83l-3.918 3.744a1 1 0 00-.316.923l1.519 4.588c.306.922-.756 1.685-1.57 1.112l-4.786-3.417a1 1 0 00-1.175 0l-4.786 3.417c-.813.573-1.879-.19-1.57-1.112l1.519-4.588a1 1 0 00-.316-.923L2.553 9.7a1 1 0 01.59-1.83h4.847a1 1 0 00.95-.691l1.519-4.588z"></path></svg>
@@ -184,6 +185,7 @@
                 <div class="text-[#D97706] mb-4">
                     <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                 </div>
+                <!-- タイトルサイズをtext-xlで統一 -->
                 <h3 class="text-xl font-bold text-gray-900 mb-3">物品の貿易・輸出入及び仲立業</h3>
                 <p class="text-gray-600 text-sm">
                     国内外の物品の貿易、輸出入、仲立、代理業を展開。特にアジア圏を中心としたネットワークを活かし、安全で効率的な国際取引をサポートします。日本の高品質な商品を世界へ、世界の優れた商品を日本へ届けます。
@@ -192,28 +194,23 @@
 
         </div>
 
-        <!-- お客様への理念・メッセージ (内容を更新) -->
-        <div class="mt-12 p-6 bg-amber-50 border-2 border-amber-200 rounded-xl shadow-md max-w-4xl mx-auto">
-            <p class="text-lg font-bold text-gray-800 mb-3">当社の理念とお客様へのメッセージ</p>
-            <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+        <!-- お客様への理念・メッセージ -->
+        <div class="mt-12 p-8 bg-white rounded-xl shadow-lg max-w-4xl mx-auto">
+            <!-- タイトル: セクションタイトルと同じく、下部にアンバー色のラインを追加 -->
+            <p class="text-xl font-extrabold text-gray-900 mb-4 inline-block relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:transform after:-translate-x-1/2 after:w-16 after:h-1 after:bg-[#D97706] after:rounded-full">当社の理念とお客様へのメッセージ</p>
+
+            <p class="text-gray-700 leading-relaxed text-sm md:text-base mt-6">
                 当店は、みなさまからお譲りいただいたお品物を<b>大切にお預かり</b>し、新しい持ち主のもとへつなぐお手伝いをしています。皆さまとの<b>ご縁を大切に</b>、<b>信頼されるお店</b>を目指してまいります。<br><br>
-                「もう使わないけれど、誰かに喜んでもらえるかも」<br>
                 そんな想いを大切に、<b>安心してご利用いただけるお店づくり</b>を心がけながら、お客様と社会の双方に喜ばれるサービスを提供してまいります。
-            </p>
-            <p class="mt-4 text-gray-700 font-medium">
-                査定や買取のご相談も、どうぞお気軽にお問い合わせください。
             </p>
         </div>
     </div>
 </section>
 
-<!-- 連絡先・所在地セクション (CONTACT/LOCATION) -->
+<!-- 連絡先・所在地セクション -->
 <section id="contact" class="py-16 md:py-24 bg-gray-800">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="section-title text-white after:bg-[#FCD34D]">連絡先・所在地 (CONTACT & LOCATION)</h2>
-        <p class="text-lg text-gray-300 mb-12">
-            各種事業に関するご相談、ご質問、採用に関するお問い合わせは、下記連絡先までお気軽にご連絡ください。
-        </p>
+        <h2 class="section-title text-white after:bg-[#FCD34D]">問い合わせ (CONTACT)</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
 
@@ -266,8 +263,7 @@
             <!-- 地図表示 -->
             <div class="bg-white p-6 md:p-8 rounded-xl shadow-2xl">
                 <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-3">所在地マップ</h3>
-                <!-- Google Maps埋め込みコード (台東区根岸二丁目18番8号) -->
-                <!-- マーカー（矢印）が確実に表示されるように、場所IDを含むURLに調整しました。 -->
+                <!-- Google Maps埋め込みコード -->
                 <div class="relative w-full h-80 rounded-lg overflow-hidden shadow-md">
                     <iframe
                             src="https://maps.google.com/maps?q=日本、〒110-0003 東京都台東区根岸２丁目１８−８ 鴬谷ハイム&z=17&output=embed"
@@ -297,7 +293,7 @@
         <nav class="flex justify-center space-x-6">
             <a href="#about" class="text-gray-400 hover:text-white text-sm transition duration-150">会社概要</a>
             <a href="#business" class="text-gray-400 hover:text-white text-sm transition duration-150">事業内容</a>
-            <a href="#contact" class="text-gray-400 hover:text-white text-sm transition duration-150">連絡先・所在地</a>
+            <a href="#contact" class="text-gray-400 hover:text-white text-sm transition duration-150">問い合わせ</a>
         </nav>
     </div>
     <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-500">
@@ -306,7 +302,7 @@
 </footer>
 
 <script>
-    // --- JavaScript for Mobile Menu Toggling ---
+    // モバイルメニューのトグル処理
     document.getElementById('mobile-menu-button').addEventListener('click', function() {
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenu.classList.toggle('hidden');
